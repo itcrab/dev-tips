@@ -79,3 +79,30 @@ python manage.py test application --keepdb
 ```Python
 from django.core.cache import cache; cache.clear()
 ```
+
+### Django-filter: BooleanFilter not working with annotated fields in Django-REST-Framework
+```Python
+class OrderFilter(django_filters.FilterSet):
+    # is_active = django_filters.BooleanFilter(name='is_active')  # not working
+    is_active = django_filters.rest_framework.BooleanFilter(name='is_active')  # normal behavior
+
+    # custom_field = django_filters.BooleanFilter(method='filter_custom_field')  # not working
+    custom_field = django_filters.rest_framework.BooleanFilter(method='filter_custom_field')  # for more power
+
+    class Meta:
+        model = Order
+        fields = ['title', 'status', 'is_active', 'custom_field']
+
+    def filter_custom_field(self, queryset, name, value):
+        lookup = {name: value}
+        return queryset.filter(**lookup)
+
+class OrderListViewSet(ListAPIView):
+    serializer_class = OrderSerializer
+    filter_backends = (DjangoFilterBackend, OrderingFilter,)
+    filter_class = OrderFilter
+    ...
+    
+    def get_queryset(self):
+        return Order.objects.annotate(custom_field=...).all()  # custom_field is BooleanField
+```
