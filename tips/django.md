@@ -83,6 +83,9 @@ from django.core.cache import cache; cache.clear()
 ### Django-filter: BooleanFilter not working with annotated fields in Django-REST-Framework
 ```Python
 class OrderFilter(django_filters.FilterSet):
+    # if you have annotated field(s) - you must declare all BooleanFields in FilterSet
+    # is_active is BooleanField in model and custom_field is BooleanField in annotated fields
+
     # is_active = django_filters.BooleanFilter(name='is_active')  # not working
     is_active = django_filters.rest_framework.BooleanFilter(name='is_active')  # normal behavior
 
