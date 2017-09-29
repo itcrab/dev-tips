@@ -51,6 +51,12 @@ class Migration(migrations.Migration):
 - final step - run `python manage.py migrate`
 - enjoy!
 
+### Revert and re-run all migrations for application
+```Bash
+python manage.py migrate app_name zero
+python manage.py migrate app_name
+```
+
 ### Fake single migration (migration is `0003_auto_20170905_1236`)
 ```Bash
 python manage.py migrate --fake app_name 0003
