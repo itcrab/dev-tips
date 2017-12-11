@@ -9,6 +9,7 @@ Tips for developers
 ## Tips
 * [Celery](tips/celery.md)
 * [Django](tips/django.md)
+* [Docker](tips/docker.md)
 * [GIT](tips/git.md)
 * [Heroku](tips/heroku.md)
 * [MySQL](tips/mysql.md)
