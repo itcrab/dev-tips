@@ -15,3 +15,4 @@ Tips for developers
 * [MySQL](tips/mysql.md)
 * [PowerShell](tips/power-shell.md)
 * [Python](tips/python.md)
+* [Redis](tips/redis.md)
