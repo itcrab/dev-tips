@@ -57,3 +57,13 @@ git push origin --delete branch_name
 git tag
 git checkout -b version2 v2.0.0
 ```
+
+### Commit with date
+```Bash
+git commit --date="12/09/2017T10:00:05" -m "Commit message"
+```
+
+### Commit with date - surprise
+```Bash
+git commit --date="3 day ago" -m "Commit message"
+```
