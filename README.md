@@ -1,10 +1,6 @@
 # dev-tips
 Tips for developers
 
-## Why i move it from gist?
-* GitHub remove link to [https://gist.github.com/](https://gist.github.com/) from top panel;
-* Tips count is grows and I need more power.
-
 
 ## Tips
 * [Celery](tips/celery.md)
@@ -17,3 +13,8 @@ Tips for developers
 * [Python](tips/python.md)
 * [RabbitMQ](tips/rabbitmq.md)
 * [Redis](tips/redis.md)
+
+
+## Why I move it from gist?
+* GitHub remove link to [https://gist.github.com/](https://gist.github.com/) from top panel;
+* Tips count is grows and I need more power.
