@@ -15,4 +15,5 @@ Tips for developers
 * [MySQL](tips/mysql.md)
 * [PowerShell](tips/power-shell.md)
 * [Python](tips/python.md)
+* [RabbitMQ](tips/rabbitmq.md)
 * [Redis](tips/redis.md)
