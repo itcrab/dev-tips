@@ -1,5 +1,14 @@
 # Django tips
 
+### SQL-queries count
+```Python
+from django.db import connection
+start_count = len(connection.queries)
+...
+end_count = len(connection.queries)
+print('sql-queries count is: {}'.format(end_count - start_count))
+```
+
 ### Move models from `app` to `newapp`
 - move models from `app` to `newapp` (in `models.py`)
 - fix all imports everywhere (find and fix imports in `*.py`)
