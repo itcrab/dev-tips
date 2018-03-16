@@ -1,5 +1,12 @@
 # Django tips
 
+### DRF disable authorization only in current view
+```Python
+class OrderCreateView(CreateAPIView):
+    authentication_classes = []
+    permission_classes = []
+```
+
 ### SQL-queries count
 ```Python
 from django.db import connection
