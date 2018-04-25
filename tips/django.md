@@ -1,5 +1,11 @@
 # Django tips
 
+### Get list relations (o2o, m2o, m2m) in model
+```Python
+from app_name.models import Order
+[field for field in Order._meta.get_fields(include_hidden=True) if field.auto_created and not field.concrete]
+```
+
 ### DRF disable authorization only in current view
 ```Python
 class OrderCreateView(CreateAPIView):
