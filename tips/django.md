@@ -1,5 +1,12 @@
 # Django tips
 
+### Django migration with data-migrations failed
+```Python
+class Migration(migrations.Migration):
+    # https://docs.djangoproject.com/en/1.11/howto/writing-migrations/#non-atomic-migrations
+    atomic = False
+```
+
 ### Get list relations (o2o, m2o, m2m) in model
 ```Python
 from app_name.models import Order
