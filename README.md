@@ -3,6 +3,7 @@ Tips for developers
 
 
 ## Tips
+* [Bash](tips/bash.md)
 * [Celery](tips/celery.md)
 * [Django](tips/django.md)
 * [Docker](tips/docker.md)
