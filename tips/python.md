@@ -1,5 +1,11 @@
 # Python tips
 
+### Set logging level
+```Python
+import logging
+logging.basicConfig(level=logging.INFO)
+```
+
 ### pip install from GitHub
 ```Bash
 pip install -e git://github.com/{user}/{repo}.git@{tag}#egg={package}
