@@ -1,5 +1,20 @@
 # Python tips
 
+### Parse ISO 8601 string to datetime object without any third-party libs
+```Python
+from datetime import datetime
+
+date_string = '2018-06-24T16:20:03+05:00'
+date_string = '{}{}'.format(date_string[:-3], date_string[-2:])  # delete ":" in timezone
+date_object = datetime.strptime(date_string, '%Y-%m-%dT%H:%M:%S%z')
+print('{}: {}'.format(type(date_object), date_object))
+print('Year: {}, month: {}, day: {}, hour: {}, minutes: {}, seconds: {}, tzinfo: {}'.format(
+    date_object.year, date_object.month, date_object.day,
+    date_object.hour, date_object.minute, date_object.second,
+    date_object.tzinfo
+))
+```
+
 ### Set logging level
 ```Python
 import logging
