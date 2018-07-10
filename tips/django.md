@@ -1,6 +1,15 @@
 # Django tips
 
-### Django migration with data-migrations failed
+### ORM select_related on self-model
+```Python
+class Order(models.Model):
+    sub_order = models.ForeignKey('self')
+    ...
+
+orders = Order.objects.select_related('sub_order').all()
+```
+
+### Migration with data-migrations failed
 ```Python
 class Migration(migrations.Migration):
     # https://docs.djangoproject.com/en/1.11/howto/writing-migrations/#non-atomic-migrations
