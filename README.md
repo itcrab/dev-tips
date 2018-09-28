@@ -10,6 +10,7 @@ Tips for developers
 * [GIT](tips/git.md)
 * [Heroku](tips/heroku.md)
 * [MySQL](tips/mysql.md)
+* [PostgreSQL](tips/postgresql.md)
 * [PowerShell](tips/power-shell.md)
 * [Python](tips/python.md)
 * [RabbitMQ](tips/rabbitmq.md)
