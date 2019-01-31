@@ -1,5 +1,21 @@
 # Python tips
 
+### Mock "name" attribute in MagicMock object
+```Python
+>>> from unittest.mock import MagicMock
+>>> mock_obj = MagicMock(id='123', name='test')
+>>> mock_obj.id
+'123'
+>>> mock_obj.name  # WTF???
+<MagicMock name='test.name' id='1517971199760'>
+>>> # fix
+>>> mock_obj.name = 'test'
+>>> mock_obj.id
+'123'
+>>> mock_obj.name
+'test'
+```
+
 ### Parse ISO 8601 string to datetime object without any third-party libs
 ```Python
 from datetime import datetime
