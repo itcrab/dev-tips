@@ -1,5 +1,10 @@
 # Docker tips
 
+### Remove all docker images
+```Bash
+docker rmi $(docker images -a -q)
+```
+
 ### Docker-compose up
 ```Bash
 docker-compose -f docker-compose.yml up -d --build
