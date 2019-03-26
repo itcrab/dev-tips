@@ -9,6 +9,7 @@ Tips for developers
 * [Docker](tips/docker.md)
 * [GIT](tips/git.md)
 * [Heroku](tips/heroku.md)
+* [Linux](tips/linux.md)
 * [MySQL](tips/mysql.md)
 * [PostgreSQL](tips/postgresql.md)
 * [PowerShell](tips/power-shell.md)
