@@ -7,8 +7,12 @@ docker rmi $(docker images -a -q)
 
 ### Remove all docker volumes
 ```Bash
-docker system prune -a -f
 docker volume rm $(docker volume ls -qf dangling=true)
+```
+
+### Remove unused data
+```Bash
+docker system prune -a -f
 ```
 
 ### Docker-compose up
