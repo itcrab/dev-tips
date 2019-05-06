@@ -1,5 +1,10 @@
 # Django tips
 
+### Shell auto run script
+```Bash
+python manage.py shell --command="import django; print(django.__version__)"
+```
+
 ### ORM select_related on self-model
 ```Python
 class Order(models.Model):
