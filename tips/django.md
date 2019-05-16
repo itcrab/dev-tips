@@ -1,5 +1,10 @@
 # Django tips
 
+### Run tests without migrations for improve performance on local machine
+```Python
+MIGRATION_MODULES = {app: None for app in '.'.join(INSTALLED_APPS).split('.')}
+```
+
 ### Shell auto run script
 ```Bash
 python manage.py shell --command="import django; print(django.__version__)"
