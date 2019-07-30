@@ -1,5 +1,10 @@
 # Celery tips
 
+### Raise exceptions from Celery tasks in tests
+```
+CELERY_EAGER_PROPAGATES_EXCEPTIONS = True
+```
+
 ### Celery task is not starting
 ```Python
 >>> task_name.delay()
