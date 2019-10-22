@@ -163,3 +163,11 @@ class OrderListViewSet(ListAPIView):
     def get_queryset(self):
         return Order.objects.annotate(custom_field=...).all()  # custom_field is BooleanField
 ```
+
+### Django user change password in shell
+```Python
+from django.contrib.auth.models import User
+u = User.objects.get(username='name@email.com')
+u.set_password('new_password')
+u.save()
+```
