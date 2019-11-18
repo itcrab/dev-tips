@@ -1,6 +1,23 @@
 # Python tips
 
-### How works with money?
+### Copy list with dict inside dict
+```Python
+>>> bad
+>>> lst1 = [{'root': {'sub_root': 123}}]
+>>> lst2 = list(lst1)
+>>> lst2[0]['root']['sub_root'] = 321
+>>> print(lst1)
+[{'root': {'sub_root': 321}}]
+>>> # good
+>>> import copy
+>>> lst1 = [{'root': {'sub_root': 123}}]
+>>> lst2 = [copy.deepcopy(l) for l in lst1]
+>>> lst2[0]['root']['sub_root'] = 321
+>>> print(lst1)
+[{'root': {'sub_root': 123}}]
+```
+
+### Works with money
 ```Python
 >>> # bad
 >>> price = 0.01
