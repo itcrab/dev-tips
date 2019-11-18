@@ -1,5 +1,50 @@
 # Python tips
 
+### How works with money?
+```Python
+>>> # bad
+>>> price = 0.01
+>>> for _ in range(15):
+>>>     price += 0.01
+>>>     print(price)
+0.02
+0.03
+0.04
+0.05
+0.060000000000000005
+0.07
+0.08
+0.09
+0.09999999999999999
+0.10999999999999999
+0.11999999999999998
+0.12999999999999998
+0.13999999999999999
+0.15
+0.16
+>>> # good
+>>> from decimal import Decimal
+>>> price = Decimal('0.01')
+>>> for _ in range(15):
+>>>     price += Decimal('0.01')
+>>>     print(price)
+0.02
+0.03
+0.04
+0.05
+0.06
+0.07
+0.08
+0.09
+0.10
+0.11
+0.12
+0.13
+0.14
+0.15
+0.16
+```
+
 ### Mock "name" attribute in MagicMock object
 ```Python
 >>> from unittest.mock import MagicMock
