@@ -1,5 +1,23 @@
 # Python tips
 
+### Find caller function
+```Python
+def func_a():
+    ...
+    import inspect
+    print('caller: {}'.format(inspect.stack()[1].function))
+    ...
+
+
+def func_b():
+    ...
+    func_a()
+    ...
+
+
+func_b()
+```
+
 ### Copy list with dict inside dict
 ```Python
 >>> bad
