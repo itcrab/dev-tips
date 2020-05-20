@@ -1,5 +1,15 @@
 # Python tips
 
+### Logging execution result function
+```Python
+def log_exec(func):
+    def wrapper(*args, **kwargs):
+        resp = func(*args, **kwargs)
+        print(f'{func}: {resp}')
+        return resp
+    return wrapper
+```
+
 ### Find caller function
 ```Python
 def func_a():
