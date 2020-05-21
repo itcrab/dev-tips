@@ -8,6 +8,11 @@ def log_exec(func):
         print(f'{func}: {resp}')
         return resp
     return wrapper
+...
+@log_exec
+def calc_discount(order, user):
+    ...
+    return discount
 ```
 
 ### Find caller function
