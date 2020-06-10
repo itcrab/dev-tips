@@ -17,6 +17,7 @@ Tips for developers
 * [Python](tips/python.md)
 * [RabbitMQ](tips/rabbitmq.md)
 * [Redis](tips/redis.md)
+* [Terminal](tips/terminal.md)
 
 
 ## Why I move it from gist?
