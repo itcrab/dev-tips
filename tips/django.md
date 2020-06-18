@@ -1,5 +1,12 @@
 # Django tips
 
+### DRF get `initial_data` in nested serializer from root serializer
+```Python
+def validate(self, attrs):
+    if self.root.initial_data['field_name'] == 'value':
+        ...
+```
+
 ### Run tests without migrations for improve performance on local machine
 ```Python
 MIGRATION_MODULES = {app: None for app in '.'.join(INSTALLED_APPS).split('.')}
