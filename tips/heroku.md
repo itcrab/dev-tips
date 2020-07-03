@@ -1,6 +1,6 @@
 # Heroku tips
 
-### Generate list config vars from app
+### Parsing list config vars from app: https://dashboard.heroku.com/apps/app-name/settings -> click the button "Reveal Config Vars"
 ```JavaScript
 let config_items = document.querySelectorAll('.config-var-item')
 let config_text = ''
