@@ -1,6 +1,6 @@
 # CI tips
 
-### CircleCI :: generate list failed tests
+### CircleCI :: parsing list failed tests
 ```JavaScript
 let failed_tests = document.querySelectorAll('ul li')
 let failed_tests_text = '';
