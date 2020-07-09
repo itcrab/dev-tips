@@ -1,5 +1,18 @@
 # Python tips
 
+### Paste code in Python interpreter with some blank lines and tabulations
+```Python
+>>> %cpaste
+def test_func(opt, grep):
+    if opt in grep:
+        return 'Super!'
+
+    return 'Oops...'
+
+--
+
+```
+
 ### Logging execution result function
 ```Python
 def log_exec(func):
