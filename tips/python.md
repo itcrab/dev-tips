@@ -1,5 +1,20 @@
 # Python tips
 
+### Dict to Object
+```Python
+>>> from collections import namedtuple
+>>> d = dict(name='Test', age=123)
+>>> o = namedtuple('DictObject', d.keys())(*d.values())
+>>> print(d)
+{'name': 'Test', 'age': 123}
+>>> print(o)
+DictObject(name='Test', age=123)
+>>> print(o.name)
+Test
+>>> print(o.age)
+123
+```
+
 ### Paste code in Python interpreter with some blank lines and tabulations
 ```Python
 >>> %cpaste
