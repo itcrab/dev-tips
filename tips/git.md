@@ -4,17 +4,17 @@
 ```Bash
 #!/usr/bin/env bash
 
-disallowed=("import package" "from package import")
+declare -a disallowed=("import package" "from package import")
 
 git diff --cached --name-status | while read x file; do
-        if [ "$x" == 'D' ]; then continue; fi
-        for stop_line in $disallowed
-        do
-            if egrep $stop_line $file ; then
-                echo "ERROR: Disallowed expression \"${stop_line}\" in file: ${file}"
-                exit 1
-            fi
-        done
+    if [ "$x" == 'D' ]; then continue; fi
+    for stop_line in "${disallowed[@]}"
+    do
+        if egrep "${stop_line}" $file ; then
+            echo "ERROR: Disallowed expression \"${stop_line}\" in file: ${file}"
+            exit 1
+        fi
+    done
 done || exit $?
 ```
 
