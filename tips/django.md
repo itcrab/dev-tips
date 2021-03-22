@@ -1,5 +1,11 @@
 # Django tips
 
+### Switching (inverting) bool values
+```Python
+Product.objects.filter(client_id=123).update(field_name=Q(field_name=False))
+```
+
+
 ### DRF get `initial_data` in nested serializer from root serializer
 ```Python
 def validate(self, attrs):
