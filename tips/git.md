@@ -1,5 +1,23 @@
 # GIT tips
 
+### Pre-commit hook
+```Bash
+#!/usr/bin/env bash
+
+disallowed=("import package" "from package import")
+
+git diff --cached --name-status | while read x file; do
+        if [ "$x" == 'D' ]; then continue; fi
+        for stop_line in $disallowed
+        do
+            if egrep $stop_line $file ; then
+                echo "ERROR: Disallowed expression \"${stop_line}\" in file: ${file}"
+                exit 1
+            fi
+        done
+done || exit $?
+```
+
 ### Delete last commit and changes
 ```Bash
 git reset --hard HEAD~1
