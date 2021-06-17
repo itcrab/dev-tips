@@ -1,10 +1,17 @@
 # Django tips
 
+### DRF leading and trailing whitespace is trimmed in CharField - disabled
+```Python
+class OrderSerializer(serializers.ModelSerializer):
+    class Meta:
+        ...
+        extra_kwargs = {"field_name": {"trim_whitespace": False}}
+```
+
 ### Switching (inverting) bool values
 ```Python
 Product.objects.filter(client_id=123).update(field_name=Q(field_name=False))
 ```
-
 
 ### DRF get `initial_data` in nested serializer from root serializer
 ```Python
