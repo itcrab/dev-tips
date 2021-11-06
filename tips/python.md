@@ -1,5 +1,16 @@
 # Python tips
 
+### Access from decorator to self-class attributes
+```Python
+def decorator(f):
+    @wraps(f)
+    def wrapper(*args, **kwargs):
+        user = args[0].user
+        ...
+        return f(*args, **kwargs)
+    return wrapper
+```
+
 ### Dict to Object
 ```Python
 >>> from collections import namedtuple
