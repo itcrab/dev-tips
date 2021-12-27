@@ -1,5 +1,13 @@
 # Docker tips
 
+### Remove some networks
+```Bash
+$ docker network ls
+...
+$ docker network rm 93319239b924
+$ docker network rm 9406a7197e73
+```
+
 ### Remove all docker images
 ```Bash
 docker rmi $(docker images -a -q)
