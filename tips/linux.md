@@ -1,5 +1,13 @@
 # Linux tips
 
+### Unban IP from fail2ban :)
+```Bash
+fail2ban-client -i
+status sshd  # IP in ban list
+set sshd unbanip 127.0.0.1
+status sshd  # IP not in ban list
+```
+
 ### Creating SWAP
 ```Bash
 fallocate -l 8G /swapfile
