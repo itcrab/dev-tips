@@ -1,6 +1,6 @@
 # Django tips
 
-### Django ORM: Find count Users with login lenght > 12 chars
+### Django ORM: Find count Users with login length > 12 chars
 ```Python
 from django.db.models.functions import Length
 from django.db.models import CharField
