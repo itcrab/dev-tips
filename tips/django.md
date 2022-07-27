@@ -1,5 +1,14 @@
 # Django tips
 
+### Django ORM: Find count Users with login lenght > 12 chars
+```Python
+from django.db.models.functions import Length
+from django.db.models import CharField
+...
+CharField.register_lookup(Length, 'length')
+result = User.objects.filter(login__length__gt=12).count()
+```
+
 ### DRF leading and trailing whitespace is trimmed in CharField - disabled
 ```Python
 class OrderSerializer(serializers.ModelSerializer):
@@ -8,7 +17,7 @@ class OrderSerializer(serializers.ModelSerializer):
         extra_kwargs = {"field_name": {"trim_whitespace": False}}
 ```
 
-### Switching (inverting) bool values
+### Django ORM: Switching (inverting) bool values
 ```Python
 Product.objects.filter(client_id=123).update(field_name=Q(field_name=False))
 ```
@@ -30,7 +39,7 @@ MIGRATION_MODULES = {app: None for app in '.'.join(INSTALLED_APPS).split('.')}
 python manage.py shell --command="import django; print(django.__version__)"
 ```
 
-### ORM select_related on self-model
+### Django ORM: select_related on self-model
 ```Python
 class Order(models.Model):
     sub_order = models.ForeignKey('self')
@@ -184,7 +193,7 @@ class OrderListViewSet(ListAPIView):
         return Order.objects.annotate(custom_field=...).all()  # custom_field is BooleanField
 ```
 
-### Django user change password in shell
+### Django ORM: Django user change password in shell
 ```Python
 from django.contrib.auth.models import User
 u = User.objects.get(username='name@email.com')
