@@ -1,5 +1,10 @@
 # GIT tips
 
+### Change author name and email for last commit
+```Bash
+git commit --amend --author="First Last <first.last@gmail.com>" --no-edit
+```
+
 ### Pre-commit hook
 ```Bash
 #!/usr/bin/env bash
