@@ -1,5 +1,17 @@
 # Python tips
 
+### Fix cross-imports problem in type-hinting Python feature
+```Python
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from order.models import PackageOrder  # cross-import problem
+...
+
+class PackagesLogic:
+    def __init__(self, packages: list[Package], order: 'PackageOrder', ...):
+        ...
+```
+
 ### Access from decorator to self-class attributes
 ```Python
 def decorator(f):
