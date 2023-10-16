@@ -1,5 +1,13 @@
 # Docker tips
 
+### `elasticsearch` container `vm.max_map_count` error in Docker by Windows 10/11 WSL2
+```Bash
+# bootstrap check failure [1] of [1]: max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]
+wsl.exe -u root
+sysctl -w vm.max_map_count=262144
+exit
+```
+
 ### Remove some networks
 ```Bash
 $ docker network ls
