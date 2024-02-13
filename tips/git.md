@@ -1,5 +1,19 @@
 # GIT tips
 
+### Pre-push hook - block any pushing into `master` branch
+```Bash
+#!/bin/sh
+
+protected_branch='master'
+current_branch=$(git rev-parse --abbrev-ref HEAD)
+
+if [ $protected_branch = $current_branch ]
+then
+  echo "`$protected_branch` is protected branch: push is not allowed!"
+  exit 1
+fi
+```
+
 ### Change author name and email for last commit
 ```Bash
 git commit --amend --author="First Last <first.last@gmail.com>" --no-edit
