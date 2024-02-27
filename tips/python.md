@@ -1,5 +1,29 @@
 # Python tips
 
+### Find all combinations
+```Python
+>>> import itertools
+>>> for var in itertools.product([0, 1], repeat=4):
+>>>     print(var)
+(0, 0, 0, 0)
+(0, 0, 0, 1)
+(0, 0, 1, 0)
+(0, 0, 1, 1)
+(0, 1, 0, 0)
+(0, 1, 0, 1)
+(0, 1, 1, 0)
+(0, 1, 1, 1)
+(1, 0, 0, 0)
+(1, 0, 0, 1)
+(1, 0, 1, 0)
+(1, 0, 1, 1)
+(1, 1, 0, 0)
+(1, 1, 0, 1)
+(1, 1, 1, 0)
+(1, 1, 1, 1)
+```
+
+
 ### Fix cross-imports problem in type-hinting Python feature
 ```Python
 from typing import TYPE_CHECKING
