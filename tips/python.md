@@ -1,5 +1,15 @@
 # Python tips
 
+
+### Convert `\uXXXX` strings to plain text (example for Arabic):
+```Python
+>>> s = "\\u062d\\u0642\\u0644 \\u0627\\u0644\\u0645\\u0646\\u062a\\u062c\\u0627\\u062a \\u0645\\u0637\\u0644\\u0648\\u0628."
+>>> result = s.encode('latin-1').decode('unicode-escape')
+>>> result
+'حقل المنتجات مطلوب.'
+```
+
+
 ### Find all combinations
 ```Python
 >>> import itertools
