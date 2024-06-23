@@ -1,5 +1,10 @@
 # Bash tips
 
+### Download file by SSH
+```Bash
+scp root@domain:/root/filename.ext .
+```
+
 ### Write to top of file
 ```Bash
 echo "
