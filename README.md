@@ -18,6 +18,7 @@ Tips for developers
 * [RabbitMQ](tips/rabbitmq.md)
 * [Redis](tips/redis.md)
 * [Terminal](tips/terminal.md)
+* [Windows 10](tips/windows10.md)
 
 
 ## Why I move it from gist?
