@@ -1,5 +1,26 @@
 # GIT tips
 
+### On newly installed Windows 10 `git pull` got the error
+```Bash
+> git pull
+fatal: detected dubious ownership in repository at 'repo_path'
+'repo_path' is owned by:
+        (inconvertible) (UUID)
+but the current user is:
+        PC-NAME/User (UUID)
+To add an exception for this directory, call:
+
+        git config --global --add safe.directory repo_path
+		
+# fix
+> takeown /f <path to the repository> /r /d y
+> git pull
+remote: Enumerating objects: 123, done.
+remote: Counting objects: 100% (123/123), done.
+remote: Compressing objects: 100% (30/30), done.
+...
+```
+
 ### Pre-push hook - block any pushing into `master` branch
 ```Bash
 #!/bin/sh
