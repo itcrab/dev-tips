@@ -1,5 +1,12 @@
 # PostgreSQL tips
 
+### Chancge user password in `psql`
+```BASH
+# psql
+postgres=# ALTER USER user_name WITH PASSWORD 'new_password';
+ALTER ROLE
+```
+
 ### Fully explain any query
 ```SQL
 EXPLAIN ANALYZE <query>;
