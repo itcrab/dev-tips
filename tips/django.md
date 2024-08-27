@@ -1,5 +1,14 @@
 # Django tips
 
+### Use cProfile for profiling Django tests
+```Bash
+# raw python
+python -m cProfile -s cumulative  .\manage.py test --noinput app_name >./profile.log
+
+# use pipenv
+pipenv run python -m cProfile -s cumulative  .\manage.py test --noinput app_name >./profile.log
+```
+
 ### Django ORM: Find count Users with login length > 12 chars
 ```Python
 from django.db.models.functions import Length
