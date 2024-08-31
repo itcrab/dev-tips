@@ -12,12 +12,13 @@ pipenv run python -m cProfile -s cumulative  .\manage.py test --noinput app_name
 ### Get test name in Django Unittest
 ```Python
 from django.test import TestCase
-...
+
 class OrderTestCase(TestCase):
     def test_create_order(self):
         full_test_path = TestCase.id(self)
         test_name = full_test_path.split('.')[-1]
-        ...
+        self.assertEqual(full_test_path, 'path.to.app.tests.OrderTestCase.test_create_order')
+        self.assertEqual(test_name, 'test_create_order')
 ```
 
 
