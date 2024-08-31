@@ -9,6 +9,18 @@ python -m cProfile -s cumulative  .\manage.py test --noinput app_name >./profile
 pipenv run python -m cProfile -s cumulative  .\manage.py test --noinput app_name >./profile.log
 ```
 
+### Get test name in Django Unittest
+```Python
+from django.test import TestCase
+...
+class OrderTestCase(TestCase):
+    def test_create_order(self):
+        full_test_path = TestCase.id(self)
+        test_name = full_test_path.split('.')[-1]
+        ...
+```
+
+
 ### Django ORM: Find count Users with login length > 12 chars
 ```Python
 from django.db.models.functions import Length
