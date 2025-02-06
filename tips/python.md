@@ -1,6 +1,12 @@
 # Python tips
 
 
+### Install `pip` in new venv created by `uv venv` (clear and blank venv):
+```Bash
+# tested on Python 3.11
+python -m ensurepip --upgrade
+```
+
 ### Convert `\uXXXX` strings to plain text (example for Arabic):
 ```Python
 >>> s = "\\u062d\\u0642\\u0644 \\u0627\\u0644\\u0645\\u0646\\u062a\\u062c\\u0627\\u062a \\u0645\\u0637\\u0644\\u0648\\u0628."
