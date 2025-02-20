@@ -1,6 +1,19 @@
 # Python tips
 
 
+### Decimal round rules
+```Python
+>>> from decimal import Decimal
+>>> d = Decimal('123.725')
+>>> d
+Decimal('123.725')
+>>> d.quantize(Decimal('0.01'))
+Decimal('123.72')
+>>> from decimal import ROUND_HALF_UP
+>>> d.quantize(Decimal('0.01'), ROUND_HALF_UP)
+Decimal('123.73')
+```
+
 ### Install `pip` in new venv created by `uv venv` (clear and blank venv):
 ```Bash
 # tested on Python 3.11
