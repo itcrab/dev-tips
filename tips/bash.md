@@ -1,5 +1,10 @@
 # Bash tips
 
+### Generate SSH-key
+```Cmd
+ssh-keygen -b 4096 -t rsa -C "name@mail.com" -N mypassphrase -f server-name
+```
+
 ### Open ports status
 ```Bash
 ss -ntpl
