@@ -1,5 +1,10 @@
 # Bash tips
 
+### Generate password
+```Bash
+openssl rand -hex 32
+```
+
 ### Generate SSH-key
 ```Cmd
 ssh-keygen -b 4096 -t rsa -C "name@mail.com" -N mypassphrase -f server-name
