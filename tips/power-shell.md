@@ -1,5 +1,16 @@
 # PowerShell tips
 
+### Set all vars from `.env` file
+```PowerShell
+Get-Content .env | foreach {
+  $name, $value = $_.split('=')
+  if ([string]::IsNullOrWhiteSpace($name) -or $name.Contains('#')) {
+    return
+  }
+  Set-Content env:\$name $value
+}
+```
+
 ### First install PowerShell Installer script (like `pyenv-win`)
 ```PowerShell
 > Invoke-WebRequest -UseBasicParsing -Uri "https://raw.githubusercontent.com/pyenv-win/pyenv-win/master/pyenv-win/install-pyenv-win.ps1" -OutFile "./install-pyenv-win.ps1"; &"./install-pyenv-win.ps1"
