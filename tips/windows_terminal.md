@@ -1,4 +1,9 @@
-# Terminal tips
+# Windows Terminal tips
+
+### Open Windows Terminal in current dir
+```Cmd
+wt -d .
+```
 
 ### Windows 10 cmd buffer problem - max size is 9999
 ##### The problem in CMD
