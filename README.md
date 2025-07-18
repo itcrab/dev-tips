@@ -17,8 +17,8 @@ Tips for developers
 * [Python](tips/python.md)
 * [RabbitMQ](tips/rabbitmq.md)
 * [Redis](tips/redis.md)
-* [Terminal](tips/terminal.md)
-* [Windows 10](tips/windows10.md)
+* [Windows Terminal](tips/windows_terminal.md)
+* [Windows 10](tips/windows_10.md)
 
 
 ## Why I move it from gist?
