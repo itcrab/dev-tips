@@ -17,6 +17,7 @@ Tips for developers
 * [Python](tips/python.md)
 * [RabbitMQ](tips/rabbitmq.md)
 * [Redis](tips/redis.md)
+* [Windows PowerShell](tips/windows_power_shell.md)
 * [Windows Terminal](tips/windows_terminal.md)
 * [Windows 10](tips/windows_10.md)
 
