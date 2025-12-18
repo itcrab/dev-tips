@@ -1,5 +1,13 @@
 # Django tips
 
+### Disable CSRF validation for local development with ngrok: `403 Forbidden: "CSRF Failed: Origin checking failed - https://example.ngrok.dev does not match any trusted origins."`
+```Python
+# in `local_dev.py`
+CSRF_TRUSTED_ORIGINS = [
+    'https://example.ngrok.dev',
+]
+```
+
 ### Use cProfile for profiling Django tests
 ```Bash
 # raw python
