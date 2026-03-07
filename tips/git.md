@@ -1,5 +1,10 @@
 # GIT tips
 
+### Generate GitHub token like PyCharm
+```Bash
+https://github.com/settings/tokens/new?description=GitHub%20token%20like%20PyCharm&scopes=repo%2Cgist%2Cread%3Aorg%2Cworkflow%2Cread%3Auser%2Cuser%3Aemail
+```
+
 ### On newly installed Windows 10 `git pull` got the error
 ```Bash
 > git pull
