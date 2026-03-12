@@ -23,6 +23,8 @@ Tips for developers
 [Windows Terminal](tips/windows_terminal.md) $\quad$
 [Windows 10](tips/windows_10.md) $\quad$
 
+[Zed](tips/zed.md) $\quad$
+
 
 ## Why I move it from gist?
 * GitHub remove link to [https://gist.github.com/](https://gist.github.com/) from top panel;
