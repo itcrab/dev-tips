@@ -6,7 +6,7 @@
 # >>> New-Item -Path "$PROFILE" -ItemType "File" -Force
 
 notepad $PROFILE
->>> function tf { task --taskfile Taskfile-local.yml }
+>>> function tf { task --taskfile Taskfile-local.yml $args }
 >>> ...
 # save
 ```
