@@ -1,5 +1,16 @@
 # PowerShell tips
 
+### Set aliases for commands in PS
+```PowerShell
+# on PathNotFound we can create file with aliases like this:
+# >>> New-Item -Path "$PROFILE" -ItemType "File" -Force
+
+notepad $PROFILE
+>>> function tf { task --taskfile Taskfile-local.yml }
+>>> ...
+# save
+```
+
 ### Set all vars from `.env` file
 ```PowerShell
 Get-Content .env | foreach {
