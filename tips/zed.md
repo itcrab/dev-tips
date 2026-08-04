@@ -28,7 +28,7 @@
 ### Fix activating Python virtual environment on Windows 10/11 PowerShell
 ```CMD
 > zed --version
-Zed 0.227.1 9f9b707d39d62468d4cdaed2d8eb95a847da4cf9
+Zed 1.13.2 5cdb7ab9d9546db683132cfa78e68acec3064cac
 ```
 ```JSON
 # in ~\AppData\Roaming\Zed\settings.json
