@@ -17,6 +17,13 @@ collected N items
 ```
 ```Python
 # fix error like this: E   ModuleNotFoundError: No module named 'app_name'
+
+# Solution 1: for `uv`
+# >>> pyproject.toml
+[tool.pytest.ini_options]
+pythonpath = ["."]
+
+# Solution 2: else
 # >>> tests\conftest.py
 import os
 import sys
