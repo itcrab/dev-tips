@@ -1,6 +1,29 @@
 # Python tips
 
 
+### Run tests with `pytest`
+```Bash
+> pytest --version
+pytest 9.1.1
+
+> pytest
+====================================================== test session starts =======================================================
+platform win32 -- Python 3.13.11, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Project\Path\app_name
+configfile: pyproject.toml
+plugins: cov-7.1.0
+collected N items
+...
+```
+```Python
+# fix error like this: E   ModuleNotFoundError: No module named 'app_name'
+# >>> tests\conftest.py
+import os
+import sys
+
+sys.path.insert(0, os.getcwd())
+```
+
 ### Decimal round rules
 ```Python
 >>> from decimal import Decimal
@@ -246,15 +269,6 @@ pip install -e git://github.com/{user}/{repo}.git@{tag}#egg={package}
 pip install twine
 python setup.py sdist
 twine upload dist/*
-```
-
-### Run tests
-```Bash
-# Run py.test tests
-py.test
-
-# if your tests in "tests" directory (fix imports)
-python -m pytest tests/
 ```
 
 ### Unittest show full text in asserts
