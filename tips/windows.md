@@ -1,5 +1,11 @@
 # Windows 11/10 tips
 
+### Change password for user
+```CMD
+> net user "user_name" "password"
+```
+
+
 ### Cyrillic problem in `cmd`:
 ```CMD
 > psql -h localhost -U postgres
