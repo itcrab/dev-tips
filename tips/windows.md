@@ -1,4 +1,4 @@
-# Windows 10 tips
+# Windows 11/10 tips
 
 ### Cyrillic problem in `cmd`:
 ```CMD

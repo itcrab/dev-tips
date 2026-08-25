@@ -21,7 +21,7 @@ Tips for developers
 [Redis](tips/redis.md) $\quad$
 [Windows PowerShell](tips/windows_power_shell.md) $\quad$
 [Windows Terminal](tips/windows_terminal.md) $\quad$
-[Windows 10](tips/windows_10.md) $\quad$
+[Windows 11/10](tips/windows.md) $\quad$
 
 [Zed](tips/zed.md) $\quad$
 
