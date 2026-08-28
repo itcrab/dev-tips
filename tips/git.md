@@ -1,5 +1,10 @@
 # GIT tips
 
+### Drop last commit with the option to re-commit the changes it contained
+```
+git reset HEAD~
+```
+
 ### Generate GitHub token like PyCharm
 ```Bash
 https://github.com/settings/tokens/new?description=GitHub%20token%20like%20PyCharm&scopes=repo%2Cgist%2Cread%3Aorg%2Cworkflow%2Cread%3Auser%2Cuser%3Aemail
