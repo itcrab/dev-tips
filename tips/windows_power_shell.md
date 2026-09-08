@@ -6,9 +6,13 @@
 # >>> New-Item -Path "$PROFILE" -ItemType "File" -Force
 
 notepad $PROFILE
->>> function tf { task --taskfile Taskfile-local.yml $args }
+>>> function tf { task --taskfile Taskfile-local.yml @args }
 >>> ...
-# save
+# save & restart PS
+
+# now we can run any task commands from our custom local config doing like this:
+> tf -- manage_py -- runserver
+> tf -- test -- app_name.module_name.tests.tests_models
 ```
 
 ### Set all vars from `.env` file
