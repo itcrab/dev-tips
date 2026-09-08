@@ -3,7 +3,7 @@
 ### Set aliases for commands in PS
 ```PowerShell
 # on PathNotFound we can create file with aliases like this:
-# >>> New-Item -Path "$PROFILE" -ItemType "File" -Force
+# > New-Item -Path "$PROFILE" -ItemType "File" -Force
 
 notepad $PROFILE
 >>> function tf { task --taskfile Taskfile-local.yml @args }
