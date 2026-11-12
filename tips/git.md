@@ -1,5 +1,20 @@
 # GIT tips
 
+### Sign every commits by your sign key
+```
+# --global can be removed if you need this only for one GIT repo
+ssh-keygen -t ed25519 -C "your@email.com"
+git config --global gpg.format ssh
+git config --global user.signingkey ~/.ssh/id_ed25519.pub
+git config --global commit.gpgsign true
+
+echo "your@email.com {cat ~/.ssh/id_ed25519.pub}" >> ~/.ssh/allowed_signers
+git config --global gpg.ssh.allowedSignersFile ~/.ssh/allowed_signers
+
+# After it you must copy `id_ed25519.pub` into your GitHub account:
+# `Settings` -> `SSH and GPG keys` -> `New SHH key` (Authentication and Signing Keys).
+```
+
 ### Drop last commit with the option to re-commit the changes it contained
 ```
 git reset HEAD~
