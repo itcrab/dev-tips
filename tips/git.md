@@ -1,5 +1,12 @@
 # GIT tips
 
+### Store auth data for next time `git pull` or etc
+```
+git config credential.helper store
+# on first step: your auth data will be stored in: ~/.git-credentials
+# on second step: now you can doing any git command without paste your auth data
+```
+
 ### Sign every commits by your sign key
 ```
 # --global can be removed if you need this only for one GIT repo
