@@ -1,5 +1,9 @@
 # Python tips
 
+### Update in `uv.lock` only one package
+```
+uv lock --upgrade-package package_name
+```
 
 ### Run tests with `pytest`
 ```Bash
