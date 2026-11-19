@@ -1,5 +1,15 @@
 # GIT tips
 
+### git fetch raise error on Windows 11/10 by origin branch name and don't fetching current state from origin
+```
+# error like this:
+ * [new branch]            ... -> origin/...
+error: cannot lock ref 'refs/remotes/origin/banch-name-1234|': Unable to create 'C:/Path/To/Project/.git/refs/remotes/origin/banch-name-1234|.lock': Invalid argument
+
+# will fix by skipping this branch on Windows ;)
+git config --add remote.origin.fetch "^refs/heads/banch-name-1234|"
+```
+
 ### Store auth data for next time `git pull` or etc
 ```
 git config credential.helper store
